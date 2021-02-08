@@ -31,10 +31,10 @@ object AnonymousClasses extends App {
 
   /* 1. implementacion generica de un trait (interfaz) llamado MyPredicate[-T] que tiene un metodo test(T) => Boolean
      2. trait generico MyTransformer[-A,B] con el metodo transform(A) => B
-     3. MyList:
-        -map(transformer) => MyList
-        -filter(predicate) => MyList
-        -flatMap(transformer from A to Mylist[B] => MyList[B]
+     3. MyListGeneric:
+        -map(transformer) => MyListGeneric
+        -filter(predicate) => MyListGeneric
+        -flatMap(transformer from A to MylistGeneric[B] => MyListGeneric[B]
 
         class EvenPredicate extends MyPredicate[Int]
         class StringToIntTransformer extends MyTransformer[String, int]
