@@ -17,7 +17,7 @@ object AbstractDataTypes extends App {
     override def eat: Unit = print("Este come comida de canino")
   }
 
-  //traits, similar a una clase abstracta, puede tener miembros abstractos y otros implementados
+  //traits, similar a una clase abstracta, tambien puede tener miembros abstractos y otros implementados
   trait Carnivore {
     def eat(animal: Animal): Unit
   }
