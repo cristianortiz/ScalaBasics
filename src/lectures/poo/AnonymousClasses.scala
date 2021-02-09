@@ -38,6 +38,10 @@ object AnonymousClasses extends App {
 
         class EvenPredicate extends MyPredicate[Int]
         class StringToIntTransformer extends MyTransformer[String, int]
+        -deberia funcionar asi
+        [1,2,3].map(n*2) = [2,4,6]
+        [1,2,3,4].filter(n % 2) = [2,4]
+        [1,2,3].flatMap(n =>[n,n+1]) => [1,2,2,3,3,4]
 
 
   * */

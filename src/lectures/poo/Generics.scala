@@ -38,7 +38,7 @@ object Generics extends App{
   val invariantAnimalList: InvariantList[Animal] = new InvariantList[Animal]
 
   /*3. La opcion mas rara: CONTRAVARIANCE, en COVARIANCE podemos substituir una lista de objetos Animal por una lista de
-        objetos Cat, porque un Cat es un Animal. PEERO en CONTRAVARIANCE, podemos reemplazad un objeto Cat con un objeto Animal,
+        objetos Cat, porque un Cat es un Animal. PEERO en CONTRAVARIANCE, podemos reemplazar un objeto Cat con un objeto Animal,
         es la relacion inversa de la COVARIANCE, (me queda una lista de Cats que son animales?? muy raro para una LISTA)
   * */
   class ContraVariantList[-A]
@@ -60,8 +60,8 @@ object Generics extends App{
     por otro Mylist de la subclase(Cat) y luego agrego un MyList de otra subclase(Dog) esa MyList volveria a ser de tipo Animal*/
     //def add(element:A): MyList[A] = ???
 
-  /*  se arregla con el bound type, el metodo add2 aceptara otro parametro B, un objeto de la superclase de A, y devolvera un
-    objeto MyList del tipo B que es super clase de A*/
+  /*  se arregla con el bound type, el metodo add2 aceptara otro parametro B, que un objeto de la superclase de A, y devolvera un
+    objeto MyList del mismo tipo B super clase de A*/
     def add2[B >: A](element: B): MyList[B] = ???
 
     /* si A = Cat -> MyList[Cat]

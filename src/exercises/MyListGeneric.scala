@@ -16,10 +16,11 @@ abstract class MyListGeneric[+A] {
  un objeto MyListGeneric de tipo Any MyListGeneric[Any] entonces un objeto Empty extiende MyListGeneric de tipo nothing MyListGeneric[Nothing]
  en el caso de Empty extiende el tipo especifico Nothing, cuando se trata de una MyListGeneric vacia
 ** */
-object EmptyG extends MyListGeneric[Nothing] {
+object EmptyG extends MyListGeneric[Nothing] { //EmptyG extiende en especifico el tipo Nothing de la clase MyListGeneric->MyListGeneric[Nothing]
   def head: Nothing = throw new NoSuchElementException
   def tail:MyListGeneric[Nothing] = throw new NoSuchElementException
   def isEmpty:Boolean = true
+  //bondtype que resuelve el problema del COVARIANCE
   def add[B >: Nothing](element: B):MyListGeneric[B] = new ConsG(element, EmptyG)
   def printElements: String = ""
 }

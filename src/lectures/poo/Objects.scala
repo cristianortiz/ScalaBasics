@@ -9,7 +9,7 @@ object Objects extends {
 
     def canFly: Boolean = false //definicion valida de un metodo de un objeto Person
 
-    //metodo factory: su bjetivo es crear un objeto de la CLASE Person, en base a ciertos parametros
+    //metodo factory: su objetivo es crear un objeto de la CLASE Person, en base a ciertos parametros
     def apply(mother:Person,father:Person): Person = new Person("Bobbie")
   }
 
